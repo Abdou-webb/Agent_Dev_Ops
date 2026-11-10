@@ -4,10 +4,17 @@ Projet Agent IA de diagnostic des échecs CI/CD et de déploiement, conçu pour 
 
 ## État initial
 
-On a commence le projet par presenter une dataset reelle  : [la fiche de données](DATASET_CARD.md) et `data/processed/observability_v0.1.jsonl`. Lancer sa construction avec :
+On a commence le projet par presenter une dataset reelle  : [la fiche de données](DATASET_CARD.md) et `data/processed/observability_v0.1.jsonl`. Le dataset traité est versionné. Pour le reconstruire depuis Loghub :
 
 ```powershell
+./scripts/fetch_sources.ps1
 python scripts/build_dataset.py
+```
+
+Vérifier le dataset déjà versionné :
+
+```powershell
+python scripts/validate_dataset.py
 ```
 
 ## Feuille de route
