@@ -1,0 +1,65 @@
+{
+  "dataset": "Agent_Dev_Ops observability v0.1",
+  "created_at_utc": "2026-11-10T10:03:59.258920+00:00",
+  "records": 12000,
+  "format": "JSONL; one real source log event per row",
+  "sources": [
+    {
+      "source_dataset": "BGL",
+      "file": "sources\\loghub\\BGL\\BGL_2k.log_structured.csv",
+      "source_url": "https://github.com/logpai/loghub/blob/master/BGL/BGL_2k.log_structured.csv",
+      "sha256": "3fe74103c0b02a28514534e2a47257a3f770135ca61afd425bbd3b9d6a31fe26",
+      "records": 2000,
+      "license": "Loghub research/academic license; attribution required"
+    },
+    {
+      "source_dataset": "HDFS",
+      "file": "sources\\loghub\\HDFS\\HDFS_2k.log_structured.csv",
+      "source_url": "https://github.com/logpai/loghub/blob/master/HDFS/HDFS_2k.log_structured.csv",
+      "sha256": "729df59774e3dde934044028546d2a55d5e3d4370b9d12fcebbe4c087b2bf7b4",
+      "records": 2000,
+      "license": "Loghub research/academic license; attribution required"
+    },
+    {
+      "source_dataset": "Linux",
+      "file": "sources\\loghub\\Linux\\Linux_2k.log_structured.csv",
+      "source_url": "https://github.com/logpai/loghub/blob/master/Linux/Linux_2k.log_structured.csv",
+      "sha256": "7c86d7b0ecb961a25f00d9475a154df97613b9974f31ce142a146caa2017c71e",
+      "records": 2000,
+      "license": "Loghub research/academic license; attribution required"
+    },
+    {
+      "source_dataset": "OpenStack",
+      "file": "sources\\loghub\\OpenStack\\OpenStack_2k.log_structured.csv",
+      "source_url": "https://github.com/logpai/loghub/blob/master/OpenStack/OpenStack_2k.log_structured.csv",
+      "sha256": "ecc88e7909777181824260e9bdacd1469bd24d55131d6fc14e9c8c17edc49ff0",
+      "records": 2000,
+      "license": "Loghub research/academic license; attribution required"
+    },
+    {
+      "source_dataset": "Spark",
+      "file": "sources\\loghub\\Spark\\Spark_2k.log_structured.csv",
+      "source_url": "https://github.com/logpai/loghub/blob/master/Spark/Spark_2k.log_structured.csv",
+      "sha256": "d7df75f6839b6bcf98ff020b6b0b6e2ee89d8cc53ee3d08d441bd42fd84a2cb5",
+      "records": 2000,
+      "license": "Loghub research/academic license; attribution required"
+    },
+    {
+      "source_dataset": "Zookeeper",
+      "file": "sources\\loghub\\Zookeeper\\Zookeeper_2k.log_structured.csv",
+      "source_url": "https://github.com/logpai/loghub/blob/master/Zookeeper/Zookeeper_2k.log_structured.csv",
+      "sha256": "e4a450c67595828103cfab049d971f54eee778fdded061222ba6581bed2a210a",
+      "records": 2000,
+      "license": "Loghub research/academic license; attribution required"
+    }
+  ],
+  "transformations": [
+    "Copied selected source fields into a canonical schema",
+    "Redacted e-mail addresses, IPv4 addresses, and token-shaped strings",
+    "Preserved native labels without inferring incident categories"
+  ],
+  "not_suitable_for": [
+    "Ground-truth CI/CD remediation training",
+    "Automatic deployment or rollback decisions"
+  ]
+}
