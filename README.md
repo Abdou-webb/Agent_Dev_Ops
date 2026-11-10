@@ -17,6 +17,17 @@ Vérifier le dataset déjà versionné :
 python scripts/validate_dataset.py
 ```
 
+## Collecte CI/CD réelle
+
+Le collecteur GitHub Actions importe les jobs réellement exécutés, y compris les échecs, dans un dataset distinct. Il ne fabrique pas de cause racine ni de correctif.
+
+```powershell
+$env:GITHUB_TOKEN = "votre-token-fine-grained-actions-read"
+python scripts/collect_github_actions.py --repo Abdou-webb/Agent_Dev_Ops
+```
+
+Les données sont ajoutées dans `data/processed/cicd_v1.0.jsonl`. Pour un dépôt privé, le token doit avoir uniquement les permissions de lecture Actions et Contents nécessaires ; ne le placez jamais dans le fichier ou les logs.
+
 ## Feuille de route
 
 1. **Dataset v0.1 — terminé** : logs publics réels et traitement reproductible.
